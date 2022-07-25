@@ -18,12 +18,12 @@
 ## Execution Procedure
 
 ```
-git clone https://github.com/zidajoseph/YelbApp.git <br>
-cd YelbApp <br>
-bundle install <br>
-rails db:create <br>
-rails db:migrate <br>
-rails s <br>
+git clone https://github.com/zidajoseph/YelbApp.git
+cd YelbApp
+bundle install
+rails db:create
+rails db:migrate
+rails s
 ```
 
 ## Check Sheet, Catalog Design and Table Definition Document
