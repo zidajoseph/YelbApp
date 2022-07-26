@@ -13,7 +13,7 @@
 
 ## Technology outside the curriculum
 
-- Cloudinary
+- Geocoder
 
 ## Execution Procedure
 
@@ -33,7 +33,8 @@ rails s
 ## Wireframe
 
 
-## ER Diagram
+### ER Diagram
+![ER Diagram](ERD.jpg)
 
 
 ## Screen Transition Diagram
