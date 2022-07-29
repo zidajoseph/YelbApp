@@ -38,3 +38,4 @@ rails s
 
 
 ## Screen Transition Diagram
+![ER Diagram](TransitionDiagram.jpg)
