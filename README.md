@@ -36,11 +36,11 @@ rails s
 https://cacoo.com/diagrams/waKuTALDCSzsxgg8/DB934 
 
 ### ER Diagram
-![ER Diagram](ERD.jpg)
+![ER Diagram](ERD.png)
 
 https://cacoo.com/diagrams/waKuTALDCSzsxgg8/22C53 
 
 ## Screen Transition Diagram
-![Transition Diagram](TransitionDiagram.jpg)
+![Transition Diagram](TransitionDiagram.png)
 
 https://cacoo.com/diagrams/waKuTALDCSzsxgg8/073F2 
