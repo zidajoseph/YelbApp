@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem "stimulus-rails"
 gem "importmap-rails"
+gem 'geocoder'
 
 gem 'shoulda-matchers', '~> 5.0'
 

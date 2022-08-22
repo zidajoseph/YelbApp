@@ -6,7 +6,9 @@
       address_1: Faker::Address.street_address,
       city: Faker::Address.city,
       state: Faker::Address.state,
-      country: "United States"
+      country: "United States",
+      latitude: 0, 
+      longitude: 0
     )
   end
   

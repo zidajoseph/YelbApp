@@ -9,8 +9,6 @@ class CreateProperties < ActiveRecord::Migration[6.0]
       t.string :country
       t.string :address_1
       t.string :address_2
-      t.string :latitude
-      t.string :longitude
       t.string :zip_code
 
       t.timestamps
