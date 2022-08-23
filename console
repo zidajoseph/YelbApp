@@ -1,0 +1,11 @@
+rails g model property name:string headline:string description:text city:string state:string country:string address_1:string address_2:string latitude:string longitude:string zip_code:string 
+
+rails g migration add_latitude_and_longitude_to_properties latitude:float longitude:float
+
+rails g migration add_geolocation_index_to_properties
+
+rails g migration add_price_cents_to_properties
+
+Property.find_each do |property| property.price = Money.from_amount((20..100).to_a.sample, "USD") property.save! end
+
+
