@@ -8,7 +8,7 @@
       state: Faker::Address.state,
       country: "United States",
       latitude: 0, 
-      longitude: 0
-    )
+      longitude: 0,
+      price: Money.from_amount((20..100).to_a.sample, "USD"))
   end
   
