@@ -8,4 +8,4 @@ rails g migration add_price_cents_to_properties
 
 Property.find_each do |property| property.price = Money.from_amount((20..100).to_a.sample, "USD") property.save! end
 
-
+rails 

@@ -17,6 +17,7 @@ gem "importmap-rails"
 gem 'geocoder'
 gem 'money-rails', '~>1.12'
 gem 'shoulda-matchers', '~> 5.0'
+gem "image_processing", ">= 1.2"
 
 gem 'bootsnap', '>= 1.4.2', require: false
 
