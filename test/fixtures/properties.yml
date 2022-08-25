@@ -9,8 +9,6 @@ one:
   country: MyString
   address_1: MyString
   address_2: MyString
-  latitude: MyString
-  longitude: MyString
   zip_code: MyString
 
 two:
@@ -22,6 +20,4 @@ two:
   country: MyString
   address_1: MyString
   address_2: MyString
-  latitude: MyString
-  longitude: MyString
   zip_code: MyString
