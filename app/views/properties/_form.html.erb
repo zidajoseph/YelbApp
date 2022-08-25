@@ -55,6 +55,18 @@
     <%= form.label :zip_code %>
     <%= form.text_field :zip_code, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
+  
+  <div class="my-5">
+    <%= form.label :price_cents %>
+    <%= form.number_field :price_cents, :step => "0.01", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+  
+  
+  <div class="my-5">
+      <%= form.label :images %>
+      
+      <%= form.file_field :images, multiple: true, direct_upload: true %>
+  </div>
 
   <div class="inline">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
