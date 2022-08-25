@@ -10,8 +10,11 @@
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <% if user_signed_in? %>
+              <% if partner_signed_in? | admin_signed_in? %>
                 <%= link_to "New property", new_property_path, class: "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" %>
+                <%= link_to 'favorites', root_path, class: "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" %>
+              <% end %>
+              <% if user_signed_in?%>
                 <%= link_to 'favorites', root_path, class: "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" %>
               <% end %>
             </div>
@@ -64,7 +67,7 @@
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <% if user_signed_in? %>
+            <% if admin_signed_in? %>
               <%= link_to 'Administration', root_path, class: "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" %>
             <% end %>
           </div>
@@ -89,7 +92,7 @@
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <% if user_signed_in? %>
+            <% if user_signed_in? | admin_signed_in?%>
               <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" %>
             <% else %>
               <%= link_to 'Login', new_user_session_path, class:"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
