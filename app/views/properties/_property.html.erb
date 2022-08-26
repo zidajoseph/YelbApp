@@ -17,7 +17,7 @@
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-8 w-8 cursor-pointer"
-          <% if @favorite.present? %>
+          <% if current_user.favorites.find_by(property_id: property.id).present? %>
             fill="#eb4c60"
           <% else %>
             fill="#ced4da"
