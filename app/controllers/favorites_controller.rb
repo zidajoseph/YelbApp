@@ -1,13 +1,11 @@
 class FavoritesController < ApplicationController
-    before_action :authenticate_user!
-
     def create
-        favorite = current_user.favorites.create(post_id: params[:post_id])
-        redirect_to posts_path, notice: "#{favorite.post.user.name}I registered my post as a favorite"
+        favorite = current_user.favorites.create(property_id: params[:property_id])
+        redirect_to properties_path, notice: "I registered my property as a favorite"
     end
 
     def show
-        @favorite = current_user.favorites.find_by(post_id: @post.id)
+        @favorite = current_user.favorites.find_by(property_id: @property.id)
     end
 
     def index
@@ -16,6 +14,6 @@ class FavoritesController < ApplicationController
     
     def destroy
         favorite = current_user.favorites.find_by(id: params[:id]).destroy
-        redirect_to posts_path, notice: "#{favorite.post.user.name}Unfavorite your post"
+        redirect_to properties_path, alert: "Unfavorite your property"
     end
 end
