@@ -16,3 +16,5 @@ rails g scaffold comment name:string description:text
 rails g migration add_property_index_to_comments
 
 rails g migration add_user_index_to_comments
+
+rails g scaffold reservation checkin_date:date checkout_date:date

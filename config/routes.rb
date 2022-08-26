@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reservations
   resources :comments
   devise_for :partners
   devise_for :admins

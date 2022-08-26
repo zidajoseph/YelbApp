@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_25_095407) do
+ActiveRecord::Schema.define(version: 2022_08_26_085237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,13 @@ ActiveRecord::Schema.define(version: 2022_08_25_095407) do
     t.integer "price_cents"
     t.string "price_currency"
     t.index ["latitude", "longitude"], name: "index_properties_on_latitude_and_longitude"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.date "checkin_date"
+    t.date "checkout_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|

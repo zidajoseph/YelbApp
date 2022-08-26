@@ -1,8 +1,17 @@
 class Property < ApplicationRecord
 
     has_many_attached :images, dependent: :destroy
+
+    validates :name, presence: true
+    validates :headline, presence: true
+    validates :description, presence: true
+    validates :address_1, presence: true
+    validates :city, presence: true
+    validates :state, presence: true
+    validates :images, presence: true
     
-    monetize :price_cents
+    monetize :price_cents, allow_nil: false
+    
     after_validation :get_price_cents
     
     geocoded_by :address

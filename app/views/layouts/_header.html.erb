@@ -12,10 +12,10 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <% if partner_signed_in? | admin_signed_in? %>
                 <%= link_to "New property", new_property_path, class: "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" %>
-                <%= link_to 'Comments', root_path, class: "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" %>
+                <%= link_to 'Favorites', root_path, class: "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" %>
               <% end %>
               <% if user_signed_in?%>
-                <%= link_to 'Comments', root_path, class: "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" %>
+                <%= link_to 'Favorites', root_path, class: "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" %>
               <% end %>
             </div>
           </div>
