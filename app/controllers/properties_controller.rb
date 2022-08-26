@@ -2,7 +2,21 @@ class PropertiesController < ApplicationController
   # before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
   # before_action :authenticate_partner!, only: [:new, :create, :edit, :update, :destroy]
   # before_action :authenticate_user!, only: [:show]
-  
+  # before_action :authenticate_partner!, less: -> { partner_signed_in? }, only: [:new, :create, :edit, :update, :destroy]
+  # before_action :authenticate_admin!, less: -> { admin_signed_in? }, only: [:new, :create, :edit, :update, :destroy]
+
+  # if admin_signed_in?
+  #   before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
+      # before_action :authenticate_admin!, less: -> { admin_signed_in? }, only: [:new, :create, :edit, :update, :destroy]
+  # elsif partner_signed_in?
+  #   before_action :authenticate_partner!, only: [:new, :create, :edit, :update, :destroy]
+      # before_action :authenticate_partner!, less: -> { partner_signed_in? }, only: [:new, :create, :edit, :update, :destroy]
+  # else 
+  #   before_action :authenticate_user!, only: [:show]
+      # before_action :authenticate_user!, less: -> { user_signed_in? }, only: [:new, :create, :edit, :update, :destroy]
+  # end
+
+
   before_action :set_property, only: %i[ show edit update destroy ]
 
   # GET /properties or /properties.json
@@ -12,6 +26,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1 or /properties/1.json
   def show
+    @favorite = current_user.favorites.find_by(post_id: @post.id)
   end
 
   # GET /properties/new
