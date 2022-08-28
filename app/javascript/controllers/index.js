@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import HeaderController from "./header_controller"
 application.register("hello", HeaderController)
+
+import GeolocationController from "./geolocation_controller"
+application.register("geolocation", GeolocationController)

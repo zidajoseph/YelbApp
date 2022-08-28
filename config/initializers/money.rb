@@ -89,8 +89,8 @@ MoneyRails.configure do |config|
   #
   # Example (using default localization from rails-i18n):
   #
-   I18n.locale = :en
-   Money.new(10_000_00, 'USD').format # => $10,000.00
+  #  I18n.locale = :en
+  #  Money.new(10_000_00, 'USD').format # => $10,000.00
   #  I18n.locale = :es
   #  Money.new(10_000_00, 'USD').format # => $10.000,00
   #
@@ -104,7 +104,7 @@ MoneyRails.configure do |config|
   #
   # In case you don't need localization and would like to use default values
   # (can be redefined using config.default_format):
-  # config.locale_backend = nil
+  config.locale_backend = nil
 
   # Set default raise_error_on_money_parsing option
   # It will be raise error if assigned different currency
