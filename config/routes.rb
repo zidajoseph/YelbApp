@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :admins
   resources :properties
   devise_for :users
+  resources :users
   resources :admins
   resources :favorites, only: [:create, :destroy, :index]
   devise_scope :user do
@@ -18,5 +19,6 @@ Rails.application.routes.draw do
   end
   # root "home#index"
   get 'home/index'
+  get 'partners/index'
   root "home#welcome"
 end
