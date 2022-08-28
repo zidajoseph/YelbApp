@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   devise_scope :partner do
     post 'partners/guest_partner_sign_in', to: 'partners/sessions#guest_partner_sign_in'
   end
-  root "home#index"
+  # root "home#index"
+  get 'home/index'
+  root "home#welcome"
 end

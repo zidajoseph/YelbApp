@@ -22,3 +22,5 @@ rails g scaffold reservation checkin_date:date checkout_date:date
 rails g model favorite
 
 rails g controller favorites
+
+rails g controller welcome
