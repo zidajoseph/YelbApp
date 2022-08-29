@@ -24,3 +24,7 @@ rails g model favorite
 rails g controller favorites
 
 rails g controller welcome
+
+rails g migration add_user_index_to_reservations
+
+rails g migration add_property_index_to_reservations

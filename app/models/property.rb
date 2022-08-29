@@ -2,7 +2,8 @@ class Property < ApplicationRecord
 
     has_many_attached :images, dependent: :destroy
     has_many :favorites, dependent: :destroy
-
+    has_many :reservations, dependent: :destroy
+    
     validates :name, presence: true
     validates :headline, presence: true
     validates :description, presence: true
