@@ -11,6 +11,8 @@ class Property < ApplicationRecord
     validates :city, presence: true
     validates :state, presence: true
     validates :images, presence: true
+
+    scope :search_name, -> name {where("name LIKE ?", "%#{name}%")}
     
     monetize :price_cents, allow_nil: false
 

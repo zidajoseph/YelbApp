@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
     def index
-        @properties = Property.all
+        if params[:name].present?
+            @properties = Property.search_name(params[:name])
+        else
+            @properties = Property.all
+        end
     end
 
     def show
