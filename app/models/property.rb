@@ -10,7 +10,6 @@ class Property < ApplicationRecord
     validates :address_1, presence: true
     validates :city, presence: true
     validates :state, presence: true
-    validates :images, presence: true
 
     scope :search_name, -> name {where("name LIKE ?", "%#{name}%")}
     
