@@ -42,7 +42,9 @@
   <% if action_name != "show" %>
     <p>
       <%= link_to "Show", property, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-      <%= link_to 'Edit', edit_property_path(property), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+      <% if partner_signed_in? | admin_signed_in? %>
+        <%= link_to 'Edit', edit_property_path(property), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+      <% end%>
     </p>
   <% end %>
 </div>
